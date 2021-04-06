@@ -65,6 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
+/*
 class MyFirstWidget extends StatelessWidget {
   int counter = 0;
   @override
@@ -78,13 +79,14 @@ class MyFirstWidget extends StatelessWidget {
     );
   }
 }
-/*
-class MyStateFull extends StatefulWidget {
+*/
+
+class MyFirstWidget extends StatefulWidget {
   @override
-  _MyStateFullState createState() => _MyStateFullState();
+  _MyFirstWidgetState createState() => _MyFirstWidgetState();
 }
 
-class _MyStateFullState extends State<MyStateFull> {
+class _MyFirstWidgetState extends State<MyFirstWidget> {
   int counter = 0;
   @override
   Widget build(BuildContext context) {
@@ -97,4 +99,3 @@ class _MyStateFullState extends State<MyStateFull> {
     );
   }
 }
-*/
