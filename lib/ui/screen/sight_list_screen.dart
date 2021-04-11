@@ -10,31 +10,24 @@ class _SightListScreen extends State<SightListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Список интересных мест',
-        ),
-        actions: [
-          IconButton(icon: Icon(Icons.qr_code), onPressed: (null)),
-        ],
-      ),
+          centerTitle: false,
+          backgroundColor: Colors.transparent,
+          toolbarHeight: 120,
+          elevation: 0,
+          title: Container(
+            child: Text(
+              'Список \nинтересных мест',
+              // textAlign: TextAlign.left,
+              maxLines: 2,
+              style: TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.bold,
+                color: Color(0xff3b3f59),
+              ),
+            ),
+          )),
       body: Center(
-        child: Text("Hello!"),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: ('Home'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.map),
-            label: ('Maps'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: ('Favorite'),
-          ),
-        ],
+        child: Column(),
       ),
     );
   }
