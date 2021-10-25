@@ -12,7 +12,6 @@ class _SightListScreen extends State<SightListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: false,
         backgroundColor: Colors.transparent,
         toolbarHeight: 120,
         elevation: 0,
