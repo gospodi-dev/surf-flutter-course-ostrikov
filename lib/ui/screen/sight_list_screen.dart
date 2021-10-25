@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:places/ui/res/textstyle.dart';
-import 'package:places/ui/res/colors.dart';
 
 class SightListScreen extends StatefulWidget {
   @override
@@ -17,18 +16,10 @@ class _SightListScreen extends State<SightListScreen> {
         toolbarHeight: 120,
         elevation: 0,
         title: Container(
-          child: RichText(
+          child: Text(
+            'Список \nинтересных мест',
             maxLines: 2,
-            text: TextSpan(text: 'C', style: textBoldGreen, children: [
-              TextSpan(text: 'писок', style: textBold, children: [
-                TextSpan(text: '\nи', style: textBoldYellow, children: [
-                  TextSpan(
-                    text: 'нтересных мест',
-                    style: textBold,
-                  ),
-                ]),
-              ]),
-            ]),
+            style: textBold,
           ),
         ),
       ),
