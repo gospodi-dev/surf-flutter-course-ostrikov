@@ -12,6 +12,7 @@ class SightCard extends StatelessWidget {
     return Container(
       child: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Stack(
               children: [
@@ -54,42 +55,45 @@ class SightCard extends StatelessWidget {
                 ),
               ],
             ),
-            Container(
-              height: 96,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(16),
-                    bottomRight: Radius.circular(16)),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(
-                      top: 16,
-                      right: 16,
-                      left: 16,
+            ConstrainedBox(
+              constraints: BoxConstraints(maxWidth: 200),
+              child: Container(
+                height: 96,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(16),
+                      bottomRight: Radius.circular(16)),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(
+                        top: 16,
+                        right: 16,
+                        left: 16,
+                      ),
+                      child: Text(
+                        sight.name,
+                        style: textTitle,
+                      ),
                     ),
-                    child: Text(
-                      sight.name,
-                      style: textTitle,
+                    Container(
+                      margin: EdgeInsets.only(
+                        bottom: 16,
+                        right: 16,
+                        left: 16,
+                        top: 2,
+                      ),
+                      child: Text(
+                        sight.details,
+                        style: textDescription,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                      ),
                     ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(
-                      bottom: 16,
-                      right: 16,
-                      left: 16,
-                      top: 2,
-                    ),
-                    child: Text(
-                      sight.details,
-                      style: textDescription,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 1,
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ],
