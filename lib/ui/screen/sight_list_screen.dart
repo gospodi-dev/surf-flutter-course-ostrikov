@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:places/ui/res/textstyle.dart';
+import 'package:places/domain/sight.dart';
 import 'package:places/ui/res/colors.dart';
+import 'package:places/ui/res/textstyle.dart';
+import 'package:places/ui/screen/sight_card.dart';
+import 'package:places/ui/screen/sight_details.dart';
+
+import '../../mocks.dart';
 
 class SightListScreen extends StatefulWidget {
   @override
@@ -16,23 +21,32 @@ class _SightListScreen extends State<SightListScreen> {
         toolbarHeight: 120,
         elevation: 0,
         title: Container(
-          child: RichText(
+          child: Text(
+            'Список \nинтересных мест',
             maxLines: 2,
-            text: TextSpan(text: 'C', style: textBoldGreen, children: [
-              TextSpan(text: 'писок', style: textBold, children: [
-                TextSpan(text: '\nи', style: textBoldYellow, children: [
-                  TextSpan(
-                    text: 'нтересных мест',
-                    style: textBold,
-                  ),
-                ]),
-              ]),
-            ]),
+            style: textBold,
           ),
         ),
       ),
       body: Center(
-        child: Column(),
+        child: Column(
+          children: mocks
+              .map((sight) => Container(
+                    margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                    child: GestureDetector(
+                      child: SightCard(sight),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SightDetails(sight),
+                          ),
+                        );
+                      },
+                    ),
+                  ))
+              .toList(),
+        ),
       ),
     );
   }
