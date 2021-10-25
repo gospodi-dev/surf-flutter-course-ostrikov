@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
-import 'package:places/ui/res/colors.dart';
 import 'package:places/ui/res/textstyle.dart';
 import 'package:places/widget/icon_button_widget.dart';
 
@@ -36,7 +35,8 @@ class SightDetails extends StatelessWidget {
                       Text(
                         sight.name,
                         style: textBold.copyWith(
-                            fontSize: 24, color: textColorTitle),
+                          fontSize: 24,
+                        ),
                       ),
                       SizedBox(
                         height: 2,
@@ -46,7 +46,8 @@ class SightDetails extends StatelessWidget {
                           Text(
                             sight.type.toLowerCase(),
                             style: textBold.copyWith(
-                                fontSize: 14, color: textColorTitle),
+                              fontSize: 14,
+                            ),
                           ),
                           SizedBox(
                             width: 16,
@@ -62,7 +63,7 @@ class SightDetails extends StatelessWidget {
                       ),
                       Text(
                         sight.details,
-                        style: textDescription.copyWith(color: textColorTitle),
+                        style: textDescription.copyWith(),
                       ),
                       SizedBox(
                         height: 24,
@@ -71,7 +72,7 @@ class SightDetails extends StatelessWidget {
                         height: 48,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          color: colorGreen,
+                          color: Colors.green,
                         ),
                         child: Center(
                           child: Text(
@@ -85,7 +86,7 @@ class SightDetails extends StatelessWidget {
                       ),
                       Container(
                         height: 0.8,
-                        color: lightGrey,
+                        color: Colors.lightGreen,
                       ),
                       SizedBox(
                         height: 8,

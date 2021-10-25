@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:places/ui/res/colors.dart';
 import 'package:places/ui/res/textstyle.dart';
 
 class BuildButton extends StatelessWidget {
@@ -15,17 +14,13 @@ class BuildButton extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 10, horizontal: 16),
       child: Row(
         children: [
-          Icon(
-            icon,
-            color: isActive ? textColorTitle : lightGrey,
-          ),
+          Icon(icon, color: Colors.lightGreen),
           SizedBox(
             width: 9,
           ),
           Text(
             title,
-            style: textDescription.copyWith(
-                color: isActive ? textColorTitle : lightGrey),
+            style: textDescription.copyWith(color: Colors.lightGreen),
           ),
         ],
       ),

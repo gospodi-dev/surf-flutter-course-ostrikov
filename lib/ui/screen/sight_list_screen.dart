@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:places/domain/sight.dart';
-import 'package:places/ui/res/colors.dart';
 import 'package:places/ui/res/textstyle.dart';
 import 'package:places/ui/screen/sight_card.dart';
 import 'package:places/ui/screen/sight_details.dart';
@@ -24,7 +24,10 @@ class _SightListScreen extends State<SightListScreen> {
           child: Text(
             'Список \nинтересных мест',
             maxLines: 2,
-            style: textBold,
+            style: const TextStyle(
+                color: Colors.black54,
+                fontSize: 28,
+                fontWeight: FontWeight.bold),
           ),
         ),
       ),

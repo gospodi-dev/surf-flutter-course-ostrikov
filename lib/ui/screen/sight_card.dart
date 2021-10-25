@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
-import 'package:places/ui/res/colors.dart';
 import 'package:places/ui/res/textstyle.dart';
 
 class SightCard extends StatelessWidget {
@@ -29,7 +28,7 @@ class SightCard extends StatelessWidget {
                         fit: BoxFit.cover,
                       )),
                   decoration: BoxDecoration(
-                    color: backColorLight,
+                    color: Colors.black54,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(16),
                       topRight: Radius.circular(16),
@@ -61,7 +60,6 @@ class SightCard extends StatelessWidget {
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(16),
                     bottomRight: Radius.circular(16)),
-                color: backColorLight,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
