@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../domain/sight.dart';
+import 'package:places/domain/sight.dart';
 
 class SightCard extends StatefulWidget {
   final Sight sight;
